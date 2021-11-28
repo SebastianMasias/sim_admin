@@ -1,24 +1,18 @@
 # README
+ 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ Mi proyecto se basa en un dashboard para un admin y muchos clientes.
 
-Things you may want to cover:
+ El admin podra desde su dashboard crear clientes (unica forma de hacer, no existe un login regular) y crear simcard y asignarlas a un cliente.
 
-* Ruby version
+ El cliente podra ver sus simcard desde su propio dashboard.
 
-* System dependencies
+ Los datos para la base de datos de la simcard seran extraidos de dos apis proporcionadas por un proveedor. por lo que cada simcard vista en este proyecto realmente esta en funcionamiento, ya sea en equipos gps, de riego, entre otros.
 
-* Configuration
+ Para efectos practicos, al panel de admin no se le pondra password, sin embargo, se le sumara esa funcion con cancancan.
 
-* Database creation
+ link para trello: https://trello.com/b/prkjPUAB/api-sim-card
 
-* Database initialization
+ En la primera tarea se encuentra la captura de los modelos dibujados en draw.io. 
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ Respecto a la tarea 003. highcart y bootstrap no seran instalados por el momento.
