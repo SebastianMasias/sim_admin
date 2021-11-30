@@ -16,3 +16,11 @@
  En la primera tarea se encuentra la captura de los modelos dibujados en draw.io. 
 
  Respecto a la tarea 003. highcart y bootstrap no seran instalados por el momento.
+
+
+Esta es la ruta para la vista de admin: 
+
+http://localhost:3000/admin/
+
+
+ 
