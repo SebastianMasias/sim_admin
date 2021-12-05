@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_28_202851) do
+ActiveRecord::Schema.define(version: 2021_12_05_162251) do
 
   create_table "clients", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_11_28_202851) do
     t.text "name"
     t.integer "rut"
     t.integer "celular"
+    t.boolean "admin"
     t.index ["email"], name: "index_clients_on_email", unique: true
     t.index ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true
   end

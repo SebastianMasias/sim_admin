@@ -227,6 +227,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    simple_table_for (0.4.0)
+      rails (>= 4.0.0)
     spring (3.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -287,6 +289,7 @@ DEPENDENCIES
   rails_admin_charts (~> 0.0.12)
   sass-rails (>= 6)
   selenium-webdriver
+  simple_table_for
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
