@@ -6,5 +6,7 @@ class HomeController < ApplicationController
   end
 
   def dashboard
+      @clients = Client.all
+      @simcards = Simcard.all
   end
 end

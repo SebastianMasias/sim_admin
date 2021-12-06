@@ -2,3 +2,20 @@
 <p>Find me in app/views/home/dashboard.html.erb</p>
 
 
+
+
+
+
+
+
+  <% current_client.simcards.each do |simcard|%>
+  <ul>
+    <li><%= simcard.number %></li>
+    <li><%= simcard.consumption%></li>
+     <li><%= simcard.balance%></li>
+     <li><%= simcard.client_id%></li>
+</ul>
+    <% end %>
+    
+
+<%= link_to "log out", destroy_client_session_path, method: :delete %>
