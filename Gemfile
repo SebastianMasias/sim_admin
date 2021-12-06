@@ -27,7 +27,9 @@ gem 'rails_admin_charts', '~> 0.0.12'
 gem 'highcharts-rails', '~> 3.0.0'
 gem 'hirb'
 gem 'cancancan'
-gem 'simple_table_for'
+gem 'bootstrap'
+gem 'jquery-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

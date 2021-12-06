@@ -5,8 +5,9 @@
 <%= link_to "log out", destroy_client_session_path, method: :delete %>
 <%else%>
 
-<%= link_to "log in", new_client_session_path %>
-<%= link_to "log in as admin", rails_admin_path %>
 
+<button type="button" class="btn btn-light"><%= link_to "log in", new_client_session_path %></button>
+<button type="button" class="btn btn-light"><%= link_to "log in as admin", rails_admin_path %>
+</button>
 <%end %>
 

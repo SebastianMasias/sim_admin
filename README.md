@@ -24,3 +24,15 @@ http://localhost:3000/admin/
 
 
  
+Sumado a lo anterior adjunto datos de acceso:
+
+Admin: 
+
+1@gmail.com
+123456
+
+cliente:
+
+2@ejemplo.com
+123456
+

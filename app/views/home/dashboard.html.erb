@@ -4,18 +4,27 @@
 
 
 
-
-
-
-
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">numero</th>
+      <th scope="col">consumo</th>
+      <th scope="col">balance</th>
+      <th scope="col">cliente</th>
+    </tr>
+  </thead>
+  <tbody>
   <% current_client.simcards.each do |simcard|%>
-  <ul>
-    <li><%= simcard.number %></li>
-    <li><%= simcard.consumption%></li>
-     <li><%= simcard.balance%></li>
-     <li><%= simcard.client_id%></li>
-</ul>
-    <% end %>
+    <tr>
     
-
-<%= link_to "log out", destroy_client_session_path, method: :delete %>
+      
+      <td><%= simcard.number %></td>
+      <td><%= simcard.consumption%></td>
+      <td><%= simcard.balance%></td>
+        <td><%= current_client.name%></td>
+        
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<button type="button" class="btn btn-light"><%= link_to "log out", destroy_client_session_path, method: :delete %></button>
