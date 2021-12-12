@@ -30,6 +30,19 @@ gem 'cancancan'
 gem 'bootstrap'
 gem 'jquery-rails'
 
+gem 'http-cookie', '~> 1.0', '>= 1.0.4'
+gem 'http-accept', '~> 2.1', '>= 2.1.1'
+gem 'netrc', '~> 0.11.0'
+gem 'mime-types', '~> 3.4', '>= 3.4.1'
+gem 'rest-client'
+gem 'rexml', '~> 3.2', '>= 3.2.4'
+gem 'nokogiri'
+gem 'open-uri'
+gem 'activesupport'
+gem 'xmlhasher'
+gem 'paypal-checkout-sdk'
+
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

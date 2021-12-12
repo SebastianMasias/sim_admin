@@ -91,13 +91,17 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    date (3.1.0)
     devise (4.8.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
     erubi (1.10.0)
+    escape_utils (1.2.1)
     execjs (2.8.1)
     ffi (1.15.4)
     globalid (1.0.0)
@@ -109,6 +113,9 @@ GEM
     highcharts-rails (3.0.10)
       railties (>= 3.1)
     hirb (0.7.3)
+    http-accept (2.1.1)
+    http-cookie (1.0.4)
+      domain_name (~> 0.5)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.3)
@@ -144,14 +151,26 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2021.1115)
     mini_mime (1.1.2)
     minitest (5.14.4)
     msgpack (1.4.2)
     nested_form (0.3.2)
+    netrc (0.11.0)
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
+    open-uri (0.1.0)
+      stringio
+      time
+      uri
     orm_adapter (0.5.0)
+    ox (2.14.6)
+    paypal-checkout-sdk (1.0.4)
+      paypalhttp (~> 1.0.1)
+    paypalhttp (1.0.1)
     popper_js (2.9.3)
     public_suffix (4.0.6)
     puma (5.5.2)
@@ -216,6 +235,10 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rexml (3.2.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
@@ -242,14 +265,21 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    stringio (3.0.0)
     temple (0.8.2)
     thor (1.1.0)
     tilt (2.0.10)
+    time (0.1.0)
+      date
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.8)
+    uri (0.10.1)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -269,6 +299,9 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xmlhasher (1.0.6)
+      escape_utils (~> 1.2)
+      ox (~> 2.11)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.5.1)
@@ -277,6 +310,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activesupport
   bootsnap (>= 1.4.4)
   bootstrap
   byebug
@@ -285,13 +319,22 @@ DEPENDENCIES
   devise
   highcharts-rails (~> 3.0.0)
   hirb
+  http-accept (~> 2.1, >= 2.1.1)
+  http-cookie (~> 1.0, >= 1.0.4)
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
+  mime-types (~> 3.4, >= 3.4.1)
+  netrc (~> 0.11.0)
+  nokogiri
+  open-uri
+  paypal-checkout-sdk
   puma (~> 5.0)
   rails (~> 6.1.4, >= 6.1.4.1)
   rails_admin (~> 2.0)
   rails_admin_charts (~> 0.0.12)
+  rest-client
+  rexml (~> 3.2, >= 3.2.4)
   sass-rails (>= 6)
   selenium-webdriver
   spring
@@ -301,6 +344,7 @@ DEPENDENCIES
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
+  xmlhasher
 
 RUBY VERSION
    ruby 3.0.0p0

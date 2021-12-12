@@ -4,9 +4,10 @@ class Ability
   include CanCan::Ability
 
   def initialize(client)
-    can :read, :all
+   
     can :access, :rails_admin   # grant access to rails_admin
-    can :read, :dashboard       # grant access to the dashboard
+    
+          # grant access to the dashboard
     if client.try(:admin?)
       can :access, :rails_admin   # grant access to rails_admin
       can :read, :dashboard       # grant access to the dashboard
