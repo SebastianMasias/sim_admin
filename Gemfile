@@ -23,8 +23,6 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'rails_admin', '~> 2.0'
-gem 'rails_admin_charts', '~> 0.0.12'
-gem 'highcharts-rails', '~> 3.0.0'
 gem 'hirb'
 gem 'cancancan'
 gem 'bootstrap'
@@ -42,6 +40,9 @@ gem 'activesupport'
 gem 'xmlhasher'
 gem 'paypal-checkout-sdk'
 gem 'mailgun-ruby', '~>1.2.5'
+
+gem "chartkick"
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

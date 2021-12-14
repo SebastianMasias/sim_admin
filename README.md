@@ -36,3 +36,33 @@ cliente:
 2@ejemplo.com
 123456
 
+feedback hito 2:
+
+
+El cliente puede ingresar al panel de administración sin ser admin. - Corregido, un par de lineas de cancancan que no correspondian.
+
+
+como ingreso simcards? no existen rutas para este recurso - desde el panel de admin se puede y es el unico sitio donde se puede tanto poner como dar de baja alguna, es intencional que sea asi.
+
+No presenta landing page explicando web a las visitas - anexado, falta css y unas imagenes que pondre luego.
+
+No se puede editar perfil - desde panel de admin, igual que simcard, se pretende que cliente deba solicitar cambios.
+
+El cliente no puede interactuar con el sitio web, ni eliminar recursos - se pretende que cliente deba solicitar cambios.
+
+
+No presenta sistema de calificación - realmente no se como integrar esto en mi idea.
+
+hito 3: 
+
+paypal aun incompleto. 
+
+mailgun en consola da todo como correcto pero mail no llega :C
+
+oauth no sabria para que usarlo dado que es el admin quien crea el perfil al cliente. 
+
+Aun falta anexar un grafico.
+
+Mas general:
+
+No logro anexar a la db los datos extraidos desde la api (el xml se transforma a hash y se extraen los datos, pero de ahi no he logrado pasar.)

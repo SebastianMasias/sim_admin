@@ -28,6 +28,8 @@ class HomeController < ApplicationController
                     
                     @clients = Client.all
                     @simcards = Simcard.all
+
+                   
                                    
  end
 
@@ -52,20 +54,6 @@ end
 
 
 
-
- #<% @c = Simcard.find(simcard.id).number%>
- #<%result = RestClient::Request.execute( { :method => :get, :url => 'https://xml2.travelsim.com/tsim_xml/service/xmlgate', :headers => {:params => {:uname => '2f6Jlwd7kg', :upass => 'AGVNHpns8b', :plain => '1', :command => 'discount', :onum => (@c) }} })%>
- #<%consumo = XmlHasher.parse(result).dig :discount, :gprs, :data_left      %>     
- 
-
- #<td><%= @consumption = consumo%></td>
- 
-  
- #<%  @p = Simcard.find(simcard.id).number%>
- #<% response = RestClient::Request.execute( { :method => :get, :url => 'https://xml2.travelsim.com/tsim_xml/service/xmlgate', :headers => {:params => {:uname => '2f6Jlwd7kg', :upass => 'AGVNHpns8b', :plain => '1', :command => 'gbalance', :onum => (@p) }} })%>
- #<% balance = XmlHasher.parse(response).dig :records, :card, :onum%>
-
- #<td><%=@factura = balance%></td>
 
 
 
