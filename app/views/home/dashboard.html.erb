@@ -18,19 +18,7 @@
       
       <td><%= simcard.number %></td>
 
-      <% @c = Simcard.find(simcard.id).number%>
-      <%result = RestClient::Request.execute( { :method => :get, :url => 'https://xml2.travelsim.com/tsim_xml/service/xmlgate', :headers => {:params => {:uname => '2f6Jlwd7kg', :upass => 'AGVNHpns8b', :plain => '1', :command => 'discount', :onum => (@c) }} })%>
-      <%consumo = XmlHasher.parse(result).dig :discount, :gprs, :data_left      %>     
       
-
-      <td><%= @consumption = consumo%></td>
-      
-       
-      <%  @p = Simcard.find(simcard.id).number%>
-      <% response = RestClient::Request.execute( { :method => :get, :url => 'https://xml2.travelsim.com/tsim_xml/service/xmlgate', :headers => {:params => {:uname => '2f6Jlwd7kg', :upass => 'AGVNHpns8b', :plain => '1', :command => 'gbalance', :onum => (@p) }} })%>
-      <% balance = XmlHasher.parse(response).dig :records, :card, :onum%>
-
-      <td><%=@factura = balance%></td>
 
      
        
@@ -42,4 +30,7 @@
 
 <button type="button" class="btn btn-light"><%= link_to "log out", destroy_client_session_path, method: :delete %></button>
 
+<button type="button" class="btn btn-light"><%= link_to "paypal test", order_path %></button>
+
+<button type="button" class="btn btn-light"><%= @mail %></button>
  
