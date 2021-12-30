@@ -1,14 +1,26 @@
-<h1>Welcome! <%=  current_client.name %></h1>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container px-5 ">
+                 <a class="navbar-brand" href="#!"><h1>bienvenido <%=  current_client.name %>!</h1></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    
+                       
+                        <li class="nav-item"><a> <%= link_to "log out", destroy_client_session_path, method: :delete, class: "nav-link nav-item" %> </a></li>
 
-
-
-<table class="table">
+                     
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<div class ="container mt-5 ">
+<table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">numero</th>
       <th scope="col">consumo(byte)</th>
       <th scope="col">balance</th>
-      
+     
     </tr>
   </thead>
   <tbody>
@@ -19,35 +31,41 @@
       <td><%= simcard.number %></td>
 
 
- <% @c = Simcard.find(simcard.id).number%>
- <%result = RestClient::Request.execute( { :method => :get, :url => 'https://xml2.travelsim.com/tsim_xml/service/xmlgate', :headers => {:params => {:uname => '2f6Jlwd7kg', :upass => 'AGVNHpns8b', :plain => '1', :command => 'discount', :onum => (@c) }} })%>
- <%consumo = XmlHasher.parse(result).dig :discount, :gprs, :data_left      %>     
- 
 
- <td><%= @consumption = consumo%></td>
+      <td><%=simcard.consumption%></td>
 
-  
- <%  @p = Simcard.find(simcard.id).number%>
- <% response = RestClient::Request.execute( { :method => :get, :url => 'https://xml2.travelsim.com/tsim_xml/service/xmlgate', :headers => {:params => {:uname => '2f6Jlwd7kg', :upass => 'AGVNHpns8b', :plain => '1', :command => 'gbalance', :onum => (@p) }} })%>
- <% balance = XmlHasher.parse(response).dig :records, :card, :balance%>
-
- <td><%=@factura = balance%></td>
-      
-
+        
+      <td><%= simcard.balance %></td>
      
        
-        
     </tr>
     <% end %>
+    
   </tbody>
 </table>
+</div>
 
-<button type="button" class="btn btn-light"><%= link_to "log out", destroy_client_session_path, method: :delete %></button>
+<div class= " row justify-content-center text-center mt-5">
 
-<button type="button" class="btn btn-light"><%= link_to "paypal test", order_path %></button>
+  <div class= "col-4 px-3">
+    <h5> Consumo por tarjeta</h3>
+    <%= bar_chart Simcard.group(:number).sum(:consumption) %>
+  </div>
 
 
 
-<%= bar_chart Simcard.group(:number).sum(@consumption) %>
+    <div class= "col-4 px-3">
+      <h5> balance total</h3>
+      <%= bar_chart Simcard.group(:number).sum(:balance) %>
+    </div>
+</div>
 
+
+
+<footer class=" bg-dark fixed-bottom">
+            <div class="container p-1 px-lg-5"><p class="m-0 text-left text-white">Contactanos!</p></div>
+             <div class="container p-1 px-lg-5"><p class="m-0 text-left text-white  fas fa-phone"> +56 952 079 162</p></div>
+             <div class="container p-1 px-lg-5"><p class="m-0 text-left text-white fas fa-envelope" >   sevlin2107@gmail.com</p></div>
+             <div class="container p-1 px-lg-5"><p class="m-0 text-left text-white fas fa-building">    visitanos en: avenida corona 1900, providencia</p></div>
+        </footer>
 

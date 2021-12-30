@@ -39,3 +39,5 @@ class SimcardController < ApplicationController
         params.require(:simcard).permit(:number, :consumption, :balance, :client_id)
     end
 end
+
+ 

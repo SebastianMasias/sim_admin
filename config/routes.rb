@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/visit'
   get 'home/index'
   get 'home/dashboard'
-  resources :home
   root 'home#index'
 
 

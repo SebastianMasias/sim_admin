@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_12_180211) do
+ActiveRecord::Schema.define(version: 2021_12_15_231324) do
 
   create_table "clients", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2021_12_12_180211) do
 
   create_table "simcards", force: :cascade do |t|
     t.integer "number"
-    t.float "consumption"
+    t.text "consumption"
     t.float "balance"
     t.string "client_id"
     t.datetime "created_at", precision: 6, null: false

@@ -20,6 +20,9 @@ class HomeController < ApplicationController
       )
         def index
         end
+        
+        def visit
+        end
 
 
  def dashboard
@@ -34,38 +37,19 @@ class HomeController < ApplicationController
  end
 
  
- def send_simple_message
-
-mg_client = Mailgun::Client.new '9292406c0f64ca832fccbc1b4d316269-8ed21946-6c636d12'
-
-
-message_params =  { from: 'sevlin@https://api.mailgun.net/v3/sandbox389ecdfabc264a4e9061b0b20bf441b2.mailgun.org',
-                    to:   'samasias@gmail.com',
-                    subject: 'The Ruby SDK is awesome!',
-                    text:    'It is really easy to send a message!'
-                  }
-
-
-@mail = mg_client.send_message 'https://api.mailgun.net/v3/sandbox389ecdfabc264a4e9061b0b20bf441b2.mailgun.org', message_params
-
-
-end
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+ # def send_simple_message
+#mg_client = Mailgun::Client.new '9292406c0f64ca832fccbc1b4d316269-8ed21946-6c636d12'
+#message_params =  { from: 'sevlin@https://api.mailgun.net/v3/sandbox389ecdfabc264a4e9061b0b20bf441b2.mailgun.org',
+                   # to:   'samasias@gmail.com',
+                  #  subject: 'The Ruby SDK is awesome!',
+                  #  text:    'It is really easy to send a message!'
+                #  }
+#@mail = mg_client.send_message 'https://api.mailgun.net/v3/sandbox389ecdfabc264a4e9061b0b20bf441b2.mailgun.org', message_params
+#end
 
 
 
