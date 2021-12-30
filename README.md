@@ -59,10 +59,8 @@ paypal aun incompleto.
 
 mailgun en consola da todo como correcto pero mail no llega :C
 
-oauth no sabria para que usarlo dado que es el admin quien crea el perfil al cliente. 
+css basicamente terminado
 
-Aun falta anexar un grafico.
+Deploy pendiente.
 
-Mas general:
 
-No logro anexar a la db los datos extraidos desde la api (el xml se transforma a hash y se extraen los datos, pero de ahi no he logrado pasar.)
