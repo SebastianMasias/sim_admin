@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container px-5 ">
+                <a class="navbar-brand" href="#!">EasyCard</a>
+             
+                </div>
+            </div>
+</nav>
+
+
+
+<div class="container center_div p-5">
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+
+
+  <div class="field p-5">
+    <%= f.label :email, class: "" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",  class: "form-control" %>
+  </div>
+
+
+
+
+  <div class="field p-5">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password",  class: "form-control" %>
+  </div>
+
+
+
+
+  <div class="actions p-5">
+    <%= f.submit "Log in", class: "btn btn-dark" %>
+  </div>
+
+
+  
+<% end %>
+
+
+</div>
+
+ <footer class="py-5 bg-dark fixed-bottom">
+
+    <div class="container px-4 px-lg-5"><p class="m-0 text-left text-white">Contactanos!</p></div>
+    <div class="container px-4 px-lg-5"><p class="m-0 text-left text-white  fas fa-phone"> +56 952 079 162</p></div>
+    <div class="container px-4 px-lg-5"><p class="m-0 text-left text-white fas fa-envelope" >   sevlin2107@gmail.com</p></div>
+    <div class="container px-4 px-lg-5"><p class="m-0 text-left text-white fas fa-building">    visitanos en: avenida corona 1900, providencia</p></div>
+
+</footer>
+

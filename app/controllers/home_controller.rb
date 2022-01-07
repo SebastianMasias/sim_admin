@@ -32,8 +32,9 @@ class HomeController < ApplicationController
           @clients = Client.all
           @simcards = Simcard.all
 
-                    
-                                          
+          
+          @balance_total = Simcard.all.sum(:balance)
+          @consumo_total = Simcard.all.sum(:consumption)       
         end
 
 

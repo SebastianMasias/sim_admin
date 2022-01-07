@@ -11,9 +11,12 @@ import "chartkick/chart.js"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+require('jquery')
 
+//= require home
 //= require jquery3
 //= require popper
 //= require bootstrap
 //= require chartkick
 //= require Chart.bundle
+//= require_tree .

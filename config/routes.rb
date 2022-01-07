@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  get 'messages/new'
+  post 'messages/create'
+  
+  #create routes for messages
+  resources :messages
+
+
   get 'home/visit'
   get 'home/index'
   get 'home/dashboard'
