@@ -8,7 +8,7 @@ class Simcard < ApplicationRecord
           
           @simcard.each do |simcard|
           @c = Simcard.find(simcard.id).number
-          result = RestClient::Request.execute( { :method => :get, :url => 'https://xml2.travelsim.com/tsim_xml/service/xmlgate', :headers => {:params => {:uname => '2f6Jlwd7kg', :upass => 'AGVNHpns8b', :plain => '1', :command => 'discount', :onum => (@c) }} })
+          result = RestClient::Request.execute( { :method => :get, :url => 'https://xml2.travelsim.com/tsim_xml/service/xmlgate', :headers => {:params => {:uname => '', :upass => '', :plain => '1', :command => 'discount', :onum => (@c) }} })
           consumo = XmlHasher.parse(result).dig :discount, :gprs, :data_left  
           
           @consumo_final= Simcard.find(simcard.id)
@@ -17,7 +17,7 @@ class Simcard < ApplicationRecord
           end
           @card.each do |sd|
           @p = Simcard.find(sd.id).number
-          response = RestClient::Request.execute( { :method => :get, :url => 'https://xml2.travelsim.com/tsim_xml/service/xmlgate', :headers => {:params => {:uname => '2f6Jlwd7kg', :upass => 'AGVNHpns8b', :plain => '1', :command => 'gbalance', :onum => (@p) }} })
+          response = RestClient::Request.execute( { :method => :get, :url => 'https://xml2.travelsim.com/tsim_xml/service/xmlgate', :headers => {:params => {:uname => '', :upass => '', :plain => '1', :command => 'gbalance', :onum => (@p) }} })
           balance = XmlHasher.parse(response).dig :records, :card, :balance
           @balance_final= Simcard.find(sd.id)
           @balance_final.update(balance: balance)
